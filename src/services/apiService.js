@@ -1,8 +1,8 @@
 export function create(data) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
     var raw = JSON.stringify({
+        
     "user": {
         "email": data["email"],
         "password": data['password'],
@@ -21,7 +21,7 @@ export function create(data) {
         .then(response => {
             console.log(response.status)
             if (response.status === 201) {
-                alert("Successfully created account!");
+                alert("Successfully created account! Login to continue.");
             } else {
                 alert("Error creating account!");
             }
